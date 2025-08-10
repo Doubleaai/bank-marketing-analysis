@@ -1,72 +1,117 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Bank Marketing Analysis
 
-## Template Instructions
+Bank Marketing Analysis is a comprehensive data analysis and prediction tool aimed at understanding customer behaviour and improving the success rate of term deposit marketing campaigns. The project uses Python for data preparation, statistical analysis, visualisation, and machine learning.
 
-Welcome,
+Dataset Content
+The dataset, bank.csv, contains customer demographic, financial, and contact information alongside the outcome of whether they subscribed to a term deposit (deposit).
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+Rows: ~45,000 records
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+Columns: 17 features including age, job, marital, education, contact, and duration.
 
-## How to use this repo
+Data source: UCI Machine Learning Repository – Bank Marketing Dataset.
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+Business Requirements
+The business goal is to:
 
-1. Copy the URL of your repository to your clipboard.
+Identify customer segments most likely to subscribe to a term deposit.
 
-1. In VS Code, select **File** -> **Open Folder**.
+Provide insights into the most effective marketing channels.
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
+Build a predictive model to support targeted marketing strategies.
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
+Hypothesis and How to Validate
+H1: Job type and term deposit subscription are dependent.
+H2: Age group and term deposit subscription are dependent.
+H3: Contact method and term deposit subscription are dependent.
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+Validation:
+I used Chi-square tests of independence on the feature-engineered dataset, supported by visualisations, to determine whether these variables are statistically associated with subscription rates.
 
-1. In VS Code, select **File** > **Open Folder** again.
+Project Plan
+ETL – Loaded, cleaned, and preprocessed raw bank.csv.
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+Feature Engineering – Created new columns such as age_band, has_any_loan, and was_previously_contacted. Saved both feature-engineered and ML-ready datasets.
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
+EDA – Explored data patterns and relationships using visualisations.
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+Hypothesis Testing – Validated observed EDA relationships statistically.
 
-1. Choose **Venv** from the dropdown list.
+ML Model – (Planned) Train and evaluate Logistic Regression for prediction.
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+Dashboard – (Planned) Build an interactive dashboard for insights.
 
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
+The Rationale to Map the Business Requirements to the Data Visualisations
+Business Requirement 1: Target customer segments → Mapped to bar plots showing subscription rates by job and age_band.
 
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
+Business Requirement 2: Best marketing channels → Mapped to bar plots comparing contact method effectiveness.
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+Business Requirement 3: Predictive modelling → Will use feature importance plots after model training.
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+Analysis Techniques Used
+Exploratory Data Analysis (EDA) – Pandas, Matplotlib, Seaborn.
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
+Statistical Testing – Chi-square tests with SciPy.
 
- ```console
- pip3 install -r requirements.txt
- ```
+Planned ML Model – Logistic Regression using Scikit-learn.
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+Limitations:
+Some features are campaign-specific and may not generalise to future marketing efforts. Certain variables (e.g., duration) may require exclusion for prediction as they are only known after contact.
 
-1. Click the **kernel** button and choose **Python Environments**.
+Ethical Considerations
+No personally identifiable information (PII) is present.
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+Bias awareness: Job, age, and education-based targeting could unintentionally cause discrimination. Any recommendations will be reviewed for fairness.
 
-```console
-! python --version
-```
+Dashboard Design (Planned)
+Pages:
 
-## Deployment Reminders
+Overview: Subscription rate trends and customer segmentation.
 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+Demographics: Visualisation by job, age_band, and marital status.
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+Contact Method: Effectiveness of cellular vs telephone.
+
+Prediction Tool: Input fields for model prediction.
+
+How Were Data Insights Communicated
+I designed plots and statistical summaries to be understandable for both technical and non-technical stakeholders, pairing visual results with plain language interpretations.
+
+Unfixed Bugs
+No current unfixed bugs. All scripts run successfully in Jupyter Notebook.
+
+Development Roadmap
+Finalise Logistic Regression model and evaluate accuracy.
+
+Build Streamlit dashboard for interactive exploration.
+
+Deploy project online.
+
+Deployment
+Deployment will be on GitHub for notebooks and datasets. The dashboard will be deployed via Heroku once complete.
+
+Main Data Analysis Libraries
+Pandas – Data cleaning and manipulation.
+
+Matplotlib / Seaborn – Visualisations.
+
+SciPy – Statistical testing (Chi-square).
+
+Scikit-learn – Planned machine learning model.
+
+Credits
+Content:
+
+Dataset from UCI Machine Learning Repository.
+
+Statistical methods inspired by Scipy documentation.
+
+Visualisation styling guided by Seaborn examples.
+
+Media:
+
+No external media used.
+
+Acknowledgements:
+
+Special thanks to ChatGPT (OpenAI, 2025) and GitHub Copilot (GitHub, 2025) for assisting in ideation, design thinking, and code optimisation.
