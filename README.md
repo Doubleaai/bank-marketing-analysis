@@ -1,5 +1,4 @@
-## Bank Marketing Analysis
-
+## Bank Marketing Analysisgit 
 Bank Marketing Analysis is a comprehensive data analysis and prediction tool aimed at understanding customer behaviour and improving the success rate of term deposit marketing campaigns. The project uses Python for data preparation, statistical analysis, visualisation, and machine learning.
 
 Dataset Content
@@ -24,6 +23,7 @@ Hypothesis and How to Validate
 H1: Job type and term deposit subscription are dependent.
 H2: Age group and term deposit subscription are dependent.
 H3: Contact method and term deposit subscription are dependent.
+H4: Housing loan status and term deposit subscription are dependent.
 
 Validation:
 I used Chi-square tests of independence on the feature-engineered dataset, supported by visualisations, to determine whether these variables are statistically associated with subscription rates.
@@ -47,6 +47,25 @@ Business Requirement 1: Target customer segments → Mapped to bar plots showing
 Business Requirement 2: Best marketing channels → Mapped to bar plots comparing contact method effectiveness.
 
 Business Requirement 3: Predictive modelling → Will use feature importance plots after model training.
+
+Analysis Summary
+I began with an Exploratory Data Analysis (EDA) to uncover patterns in customer demographics, financial status, and marketing contact methods. This revealed clear trends: retired and student customers subscribed at much higher rates than most other job types, middle-aged and older customers were more likely to subscribe than younger ones, and cellular contact far outperformed telephone outreach.
+
+These initial findings guided my Hypothesis Testing phase, where I statistically validated the relationships using Chi-square tests of independence. I confirmed significant associations (p < 0.05) for all four tested factors:
+
+H1: Job type — Retired and student customers showed the highest subscription rates.
+
+H2: Age group — Middle-aged and older customers subscribed more than younger ones.
+
+H3: Contact method — Cellular contact was more effective than telephone.
+
+H4: Housing loan status — Customers without a housing loan had a higher subscription proportion.
+
+From these insights, I recommend targeting high-performing job and age segments, prioritising cellular contact methods, and exploring investment opportunities with customers who do not have housing loans. These findings will feed directly into my predictive modelling stage to create a Logistic Regression model aimed at improving campaign targeting.
+
+References:
+OpenAI. (2025). ChatGPT. https://chat.openai.com
+GitHub. (2025). GitHub Copilot. https://github.com/features/copilot
 
 Analysis Techniques Used
 Exploratory Data Analysis (EDA) – Pandas, Matplotlib, Seaborn.
