@@ -149,8 +149,9 @@ Visualisation styling guided by Seaborn examples.
 
 Media:
 
-No external media used.
+No external media used. 
 
 Acknowledgements:
+
 
 Special thanks to ChatGPT (OpenAI, 2025) and GitHub Copilot (GitHub, 2025) for assisting in ideation, design thinking, and code optimisation.
