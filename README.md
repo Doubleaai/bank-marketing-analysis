@@ -1,4 +1,4 @@
-## Bank Marketing Analysisgit 
+## Bank Marketing Analysis
 Bank Marketing Analysis is a comprehensive data analysis and prediction tool aimed at understanding customer behaviour and improving the success rate of term deposit marketing campaigns. The project uses Python for data preparation, statistical analysis, visualisation, and machine learning.
 
 Dataset Content
@@ -76,6 +76,26 @@ Planned ML Model – Logistic Regression using Scikit-learn.
 
 Limitations:
 Some features are campaign-specific and may not generalise to future marketing efforts. Certain variables (e.g., duration) may require exclusion for prediction as they are only known after contact.
+
+Machine Learning
+I initially implemented a Logistic Regression model during my feature engineering stage to create a baseline for predicting whether a customer would subscribe to a term deposit. While this provided interpretable results, I wanted to explore more advanced algorithms to see if predictive performance could be improved.
+
+For this, I trained and evaluated two additional supervised learning models:
+
+1. Random Forest Classifier
+The Random Forest model was chosen for its ability to handle mixed data types, capture non-linear relationships, and provide feature importance scores. It performed reliably, producing balanced precision and recall values, and highlighted that previous contact history, month of contact, and specific job categories were among the most influential predictors.
+
+2. XGBoost Classifier
+I also implemented XGBoost, a gradient boosting algorithm known for strong performance on structured/tabular data. After cleaning my column names for compatibility, XGBoost achieved slightly higher recall on the positive class compared to Random Forest, making it particularly useful for identifying potential subscribers. Like Random Forest, it confirmed the importance of features such as previous outcome, call intensity, and age bands.
+
+Evaluation and Insights
+Both models were evaluated using accuracy, precision, recall, F1-score, and confusion matrices.
+
+Random Forest offered balanced predictions with clear interpretability of top features.
+
+XGBoost provided slightly better recall, which is valuable in marketing scenarios where identifying potential subscribers is more important than avoiding false positives.
+
+Feature importance analysis from both models will directly inform my dashboard recommendations, helping stakeholders focus on the most influential customer attributes.
 
 Ethical Considerations
 No personally identifiable information (PII) is present.
