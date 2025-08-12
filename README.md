@@ -3,6 +3,24 @@
 Bank Marketing Analysis is a comprehensive data analysis and prediction tool aimed at understanding customer behaviour and improving the success rate of term deposit marketing campaigns. The project uses Python for data preparation, statistical analysis, visualisation, and machine learning.  
 
 ---
+## Table of Contents
+
+1. [Dataset Content](#dataset-content)
+2. [Data Source & Licensing](#data-source--licensing)
+3. [Business Requirements](#business-requirements)
+4. [Hypotheses and Validation](#hypotheses-and-validation)
+5. [ETL Process](#etl-process)
+6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+7. [Feature Engineering & Modelling](#feature-engineering--modelling)
+8. [Dashboard Access](#dashboard-access)
+9. [User Personas & Agile Stories](#user-personas-and-dashboard-mapping)
+10. [Bugs & Fixes](#common-bugs-encountered-and-fixes)
+11. [Testing & Validation](#testing--data-validation)
+12. [Model Interpretability](#model-interpretability)
+13. [Ethical Considerations](#ethical-considerations)
+14. [References](#references)
+
+---
 
 ## Dataset Content  
 
