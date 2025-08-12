@@ -165,6 +165,11 @@ While the dashboard offers interactive filtering and drill-down features, perfor
 Plots and statistical summaries were designed to be understandable for both technical and non-technical stakeholders, pairing visual results with plain language interpretations.  
 
 ---
+### Bugs & Fixes  
+
+During development, several technical issues were identified and resolved. Some numeric columns, such as `age` and `balance`, were incorrectly loaded as strings due to automatic type inference during CSV import, which was fixed by explicitly converting them using `pd.to_numeric()` and `.astype()`. Categorical columns like `job` contained inconsistent capitalisation (e.g., "management" vs "Management"), which was resolved by converting all text values to lowercase for consistency. Visualisations initially failed to render correctly in Jupyter Notebook due to missing `%matplotlib inline` and inadequate figure sizing, both of which were addressed to improve clarity and readability. Finally, Logistic Regression training failed at first because string-based categorical variables were present in the dataset, which was corrected by applying one-hot encoding with `pd.get_dummies()` to ensure all model inputs were numeric.
+
+---
 
 ## Unfixed Bugs  
 
