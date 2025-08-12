@@ -155,6 +155,10 @@ Supports decision-making by providing in-depth analysis of customer and campaign
 - As a **Data Analyst**, I want access to all four visuals in a Tableau Dashboard with interactive filters, so that I can validate statistical findings and generate detailed reports for stakeholders.  
 
 ---
+### Limitations
+While the dashboard offers interactive filtering and drill-down features, performance issues were encountered during development. When multiple filter actions were applied across several large worksheets simultaneously, Tableau occasionally became unresponsive or crashed. This is likely due to the size of the dataset and the processing load from applying multiple cross-sheet filters at once. To maintain stability, the final dashboard uses a simplified set of filter actions, balancing interactivity with performance.
+
+---
 
 ## How Were Data Insights Communicated  
 
