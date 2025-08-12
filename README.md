@@ -112,10 +112,22 @@ Feature importance analysis from both models will directly inform my dashboard r
 - No personally identifiable information (PII) is present.  
 - Bias awareness: Job, age, and education-based targeting could unintentionally cause discrimination. Recommendations will be reviewed for fairness.  
 
----
-## Dashboard Access  
+--- 
 
-The interactive Tableau dashboard for this project is available here: [View Dashboard](YOUR_TABLEAU_LINK_HERE)
+##  Dashboard Access
+
+This project includes two Tableau dashboards:
+##  Dashboard Access
+
+Explore the interactive visual insights via two Tableau Public dashboards:
+
+- **[Overview Dashboard](https://public.tableau.com/app/profile/aamina.abdillahi5962/viz/bankanalysisdashboard-overview/overview?publish=yes)**  
+  Presents senior stakeholder views on subscription metrics, key segments, and campaign strategy.
+
+- **[Customer Insights Dashboard](https://public.tableau.com/app/profile/aamina.abdillahi5962/viz/bankanalysisdashboard-CustomerInsightsDashboard/CustomerInsightsDashboard?publish=yes)**  
+
+  Offers detailed analyses of customer segments, contact methods, subscription trends by age, and housing loan relationships.
+
 
 It contains:  
 - Overview of subscription rate trends and customer segmentation  
