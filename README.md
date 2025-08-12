@@ -46,7 +46,7 @@ Chi-square tests of independence on the feature-engineered dataset, supported by
 
 ## Mapping Business Requirements to Data Visualisations  
 
-- **Target customer segments** → Bar plots showing subscription rates by job and age band.  
+- **Target customer segments** → Bar plots showing subscription rates by job, and a line graph showing subscription rate trends by age group.  
 - **Best marketing channels** → Pie charts comparing contact method effectiveness.  
 - **Predictive modelling** → Feature importance plots after model training.  
 
@@ -77,6 +77,8 @@ Chi-square testing confirmed significant associations (p < 0.05) for all hypothe
 - **EDA:** Pandas, Matplotlib, Seaborn  
 - **Statistical Testing:** Chi-square tests with SciPy  
 - **Machine Learning:** Logistic Regression, Random Forest, XGBoost  
+
+---
 
 **Limitations:**  
 Some features are campaign-specific and may not generalise to future marketing efforts. Certain variables (e.g., `duration`) may require exclusion for prediction as they are only known after contact.  
@@ -111,6 +113,15 @@ Feature importance analysis from both models will directly inform my dashboard r
 - Bias awareness: Job, age, and education-based targeting could unintentionally cause discrimination. Recommendations will be reviewed for fairness.  
 
 ---
+## Dashboard Access  
+
+The interactive Tableau dashboard for this project is available here: [View Dashboard](YOUR_TABLEAU_LINK_HERE)
+
+It contains:  
+- Overview of subscription rate trends and customer segmentation  
+- Demographics breakdown by job, age_band, and marital status  
+- Contact method effectiveness (cellular vs telephone)  
+- Predictive modelling results integrated into a visual interface
 
 ## Dashboard Design  
 
@@ -137,7 +148,7 @@ Responsible for overseeing the bank’s retail marketing campaigns and allocatin
 Designs and manages term deposit products with the aim of increasing uptake and tailoring features to customer needs.  
 
 **Relevant Visuals:**  
-- Subscription Rates by Age Group (**Stacked Column Chart**)  
+- Subscription Rates by Age Group (**Line Graph**)  
 - Housing Loan Status vs. Subscription Rate (**Heat Map**)  
 
 ### 3. Priya Desai — Data Analyst  
