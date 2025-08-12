@@ -134,9 +134,14 @@ Feature importance analysis from both models will directly inform my dashboard r
 ---
 
 ## Ethical Considerations  
-
-- No personally identifiable information (PII) is present.  
-- Bias awareness: Job, age, and education-based targeting could unintentionally cause discrimination. Recommendations will be reviewed for fairness.  
+ 
+- No personally identifiable information (PII) is present in the dataset.
+- **Bias Awareness:**  
+  Features such as job, age, and education may reflect or reinforce societal biases. Care was taken to ensure that model recommendations do not unfairly target or exclude protected groups.  
+- **Fairness Checks:**  
+  Model performance was reviewed across key demographic groups (e.g., age bands, job types) to identify any disparities in prediction accuracy or false positive/negative rates.  
+- **Responsible Use:**  
+  All insights and recommendations are intended to support ethical marketing practices and comply with relevant regulations (e.g., GDPR).  
 
 --- 
 
