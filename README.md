@@ -204,6 +204,7 @@ Supports decision-making by providing in-depth analysis of customer and campaign
 ### Limitations
 While the dashboard offers interactive filtering and drill-down features, performance issues were encountered during development. When multiple filter actions were applied across several large worksheets simultaneously, Tableau occasionally became unresponsive or crashed. This is likely due to the size of the dataset and the processing load from applying multiple cross-sheet filters at once. To maintain stability, the final dashboard uses a simplified set of filter actions, balancing interactivity with performance.
 
+The dashboards were published separately because Tableau Public only allows one dashboard per published workbook, so an Overview and Detailed Analysis dashboard had to be created and published as two individual workbooks.
 ---
 
 ## How Were Data Insights Communicated  
