@@ -11,6 +11,14 @@ Bank Marketing Analysis is a comprehensive data analysis and prediction tool aim
 - **Data source:** UCI Machine Learning Repository – Bank Marketing Dataset (`bank.csv`).  
 
 ---
+## Data Source & Licensing
+
+This project uses the [Bank Marketing Dataset](https://www.kaggle.com/datasets/henriqueyamahata/bank-marketing) originally from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing).  
+- **License:** The dataset is made available for research and educational purposes. Please review the [UCI license terms](https://archive.ics.uci.edu/ml/machine-learning-databases/00429/) for details.
+- **Original Data File:** `data/bank.csv` (downloaded from Kaggle/UCI)
+- **Preprocessing:** All data cleaning, transformation, and feature engineering steps are documented in the ETL notebook. No rows or columns were removed except for duplicates and missing values as described.
+
+---
 
 ## Business Requirements  
 
